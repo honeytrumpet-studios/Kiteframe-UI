@@ -1,0 +1,21 @@
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>KiteFrame Demo</title>
+    <style>
+      html, body, #root { height: 100%; margin: 0; }
+      .app { height: 100%; display: flex; flex-direction: column; }
+      .toolbar { display:flex; gap:8px; padding:8px; border-bottom:1px solid #e2e8f0; background:#fff; position:sticky; top:0; z-index:10; }
+      .canvas-wrap { flex:1; min-height:0; }
+      button { border:1px solid #e2e8f0; border-radius:6px; padding:6px 10px; background:#fff; cursor:pointer; }
+      button:hover { background:#f8fafc; }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
