@@ -1,0 +1,94 @@
+{
+  "name": "@kiteline/kiteframe",
+  "version": "1.0.0",
+  "description": "Production-ready React component library for building interactive flow diagrams, collaborative canvases, and AI-powered workflow applications",
+  "type": "module",
+  "license": "MIT",
+  "author": "Kiteline",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kiteline/kiteframe"
+  },
+  "keywords": [
+    "react",
+    "flow-diagram",
+    "workflow",
+    "canvas",
+    "collaboration",
+    "real-time",
+    "ai",
+    "yjs",
+    "node-editor",
+    "graph-editor",
+    "visual-programming"
+  ],
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./styles": {
+      "import": "./dist/styles.css",
+      "require": "./dist/styles.css"
+    }
+  },
+  "sideEffects": [
+    "*.css"
+  ],
+  "peerDependencies": {
+    "react": ">=18",
+    "react-dom": ">=18",
+    "@radix-ui/react-dialog": ">=1.0.0",
+    "@radix-ui/react-dropdown-menu": ">=2.0.0",
+    "@radix-ui/react-popover": ">=1.0.0",
+    "@radix-ui/react-select": ">=2.0.0",
+    "@radix-ui/react-slot": ">=1.0.0",
+    "@radix-ui/react-tooltip": ">=1.0.0",
+    "clsx": ">=2.0.0",
+    "dagre": ">=0.8.5",
+    "framer-motion": ">=10.0.0",
+    "lucide-react": ">=0.300.0",
+    "tailwind-merge": ">=2.0.0",
+    "yjs": ">=13.6.0",
+    "y-websocket": ">=1.5.0",
+    "zustand": ">=4.0.0"
+  },
+  "peerDependenciesMeta": {
+    "yjs": {
+      "optional": true
+    },
+    "y-websocket": {
+      "optional": true
+    },
+    "framer-motion": {
+      "optional": true
+    }
+  },
+  "scripts": {
+    "build": "tsup index.ts --dts --format esm,cjs --out-dir dist --clean",
+    "dev": "tsup --watch",
+    "prepare": "npm run build",
+    "type-check": "tsc --noEmit",
+    "lint": "eslint .",
+    "test": "vitest run",
+    "test:watch": "vitest"
+  },
+  "devDependencies": {
+    "@types/react": "^18.0.0",
+    "@types/react-dom": "^18.0.0",
+    "@types/dagre": "^0.7.52",
+    "tsup": "^8.0.0",
+    "typescript": "^5.6.0",
+    "vitest": "^1.0.0"
+  }
+}
